@@ -2,12 +2,9 @@ package main
 
 import (
 	"fmt"
+	"gochan/utils"
 	"time"
 )
-
-func SalutaChan(canale chan string) {
-	canale <- "Ciao mondo"
-}
 
 func main() {
 	currentTime := time.Now()
@@ -26,7 +23,7 @@ func main() {
 	defer close(channel2)
 
 	//Lancia una routine che esegue la funzione SalutaChan
-	go SalutaChan(channel1)
+	go utils.SalutaChan(channel1)
 
 	//Ricevo la risposta da chan
 	risposta := <-channel1
