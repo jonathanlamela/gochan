@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gochan/utils"
+	"gochan/pkgs/utils"
 	"time"
 )
 
